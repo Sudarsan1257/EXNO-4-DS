@@ -34,7 +34,8 @@ from sklearn.metrics import accuracy_score, confusion_matrix
 df=pd.read_csv("income.csv",na_values=[ " ?"])
 df
 ```
-<img width="1656" height="681" alt="image" src="https://github.com/user-attachments/assets/5ddd0005-18df-4de0-9ac8-96045c295d82" />
+<img width="1656" height="681" alt="image" src="https://github.com/user-attachments/assets/5ddd0005-18df-4de0-9ac8-96045c295d82" />\
+
 ```
 df.isnull().sum()
 ```
@@ -107,6 +108,7 @@ KNN_classifier=KNeighborsClassifier(n_neighbors = 5)
 KNN_classifier.fit(train_x,train_y)
 ```
 <img width="932" height="250" alt="image" src="https://github.com/user-attachments/assets/ed8b6d9f-3190-4d5f-953c-7cd3cebaf2e7" />
+
 ```
  prediction=KNN_classifier.predict(test_x)
  confusionMatrix=confusion_matrix(test_y, prediction)
@@ -120,6 +122,7 @@ accuracy = accuracy_score(test_y,prediction)
 print(accuracy)
 ```
 <img width="577" height="131" alt="image" src="https://github.com/user-attachments/assets/a55d58fc-7d77-4e42-bc6e-f43818658dbd" />
+
 ```
 print("Misclassified Samples : %d" % (test_y !=prediction).sum())
 ```
@@ -169,6 +172,7 @@ contingency_table=pd.crosstab(tips['sex'],tips['time'])
 print(contingency_table)
 ```
 <img width="648" height="183" alt="image" src="https://github.com/user-attachments/assets/c348fa21-2aef-4799-8523-86bde7421ce1" />
+
 ```
 chi2,p,_,_=chi2_contingency(contingency_table)
 print(f"Chi-Square Statistics: {chi2}")
